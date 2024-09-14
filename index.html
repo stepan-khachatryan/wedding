@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Հարություն և Գայանե</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #timer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #timer div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .line {
+            border: 1px solid;
+            display: inline-block;
+        }
+
+        .timerHours {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-family: Arm Hmk\'s, sans-serif;
+        }
+
+        .timerDay {
+            font-size: 20px;
+            text-transform: capitalize;
+            font-family: Arm Hmk\'s, sans-serif;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0s 0.3s;
+        }
+
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 10px;
+            max-width: 90%;
+            width: 90%;
+            height: 500px;
+            position: relative;
+            border-radius: 8px;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .modal.active .modal-content {
+            transform: scale(1);
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 30px;
+            cursor: pointer;
+            background: #E5E5E5;
+            color: black;
+            padding: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .close:focus {
+            outline: none;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <figure class="headerFigure">
+                <img src="img/photo/arm.png" alt="" class="headerImg">
+            </figure>
+            <div class="language">
+                <a href="english.html" class="languageLink">English</a>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="invitation">
+            <div class="container">
+                <p class="invitationMainTitle">
+                    Հարսանյաց <br> հրավիրատոմս
+                </p>
+                <div class="invitationText">
+                    <p class="invitationTextTitle">
+                        ՍԻՐԵԼԻ ՀՅՈՒՐԵՐ
+                    </p>
+                    <p class="invitationTextInfo">
+                        Մենք ցանկանում ենք Ձեզ հետ կիսել մեր կյանքի կարևորագույն օրերից մեկը,որը տեղի կունենա
+                    </p>
+                </div>
+                <figure class="invitationFigure">
+                    <img src="img/photo/1.png" alt="" class="invitationImg">
+                </figure>
+                <div class="date">
+                    <p class="day">15/11</p>
+                    <p class="year">2024</p>
+                </div>
+            </div>
+        </div>
+        <div class="timer">
+            <div class="container">
+                <p class="timerInfo">
+                    Հարսանիքին մնացել է
+                </p>
+                <div class="countdown" id="timer">
+                </div>
+            </div>
+        </div>
+        <div class="program">
+            <div class="container">
+                <div class="programBtn">
+                    <p class="programTitle">Ծրագիր</p>
+                    <figure class="programFigure">
+                        <img src="img/photo/groom.png" alt="" class="programImg">
+                    </figure>
+                    <div class="programInfo">
+                        <p class="groom">Փեսայի տուն</p>
+                        <p class="address">ք․ Գյումրի</p>
+                        <p class="time">11:00</p>
+                    </div>
+                </div>
+                <div class="programBtn">
+                    <figure class="programFigure">
+                        <img src="img/photo/bride.png" alt="" class="programImg">
+                    </figure>
+                    <div class="programInfo">
+                        <p class="groom">հարսի տուն</p>
+                        <p class="address">ք․ Գյումրի</p>
+                        <p class="time">12:00</p>
+                    </div>
+                </div>
+                <div class="programBtn">
+                    <figure class="programFigure">
+                        <img src="img/photo/church.JPG" alt="" class="programImg">
+                    </figure>
+                    <div class="programInfo">
+                        <p class="groom">Սուրբ աստվածածին մայր եկեղեցի (սուրբ յոթ վերք)</p>
+                        <p class="address">ք․ Գյումրի</p>
+                        <p class="time">13:00</p>
+                        <button class="map" id="openChurchMap">Ինչպես հասնել</button>
+                    </div>
+                </div>
+                <div class="programBtn">
+                    <figure class="programFigure">
+                        <img src="img/photo/imperial.png" alt="" class="programImg">
+                    </figure>
+                    <div class="programInfo">
+                        <p class="groom">Imperial palace</p>
+                        <p class="address">ք․ Գյումրի</p>
+                        <p class="time">17:00</p>
+                        <button class="map" id="openImperialMap">Ինչպես հասնել</button>
+                    </div>
+                </div>
+                <div class="thankYouBtn">
+                    <p class="thankYouTitle">Հարգելի Հյուրեր,</p>
+                    <p class="thankYou">
+                        սրտանց երախտագիտությամբ շնորհակալություն ենք հայտնում մեր հրավերն ընդունելու և մեր կյանքում այս
+                        անփոխարինելի օրն էլ ավելի հիասքանչ դարձնելու համար։ Մենք անկեղծորեն ուրախ կլինենք տեսնել Ձեզ մեր
+                        կողքին և կիսել մեր ուրախությունը Ձեզ հետ:
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<div class="modal" id="churchModal">
+    <div class="modal-content">
+        <span class="close" id="closeChurchModal">&times;</span>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.9049015714213!2d43.8423011!3d40.7861048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4041fb8b7295a273%3A0x6c72cf08c2446623!2z1Y3VuNaC1oDVoiDUsdW91b_VvtWh1a7VodWu1avVtiDVpdWv1aXVstWl1oHVqyAo1YXVuNWpINWO1aXWgNaEKQ!5e0!3m2!1shy!2sam!4v1726271886506!5m2!1shy!2sam" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+
+<div class="modal" id="imperialModal">
+    <div class="modal-content">
+        <span class="close" id="closeImperialModal">&times;</span>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.2792890686806!2d43.8574257!3d40.7998561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4041fbc138c9f03f%3A0xda50f3ec2b386f8c!2sImperial%20restaurant!5e0!3m2!1shy!2sam!4v1726272500212!5m2!1shy!2sam" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+
+<script>
+    function countdown() {
+        const day = new Date('November 15, 2024 10:00:00').getTime();
+        const now = new Date().getTime();
+        const distance = day - now;
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const min = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const sec = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('timer').innerHTML =
+            "<div>" + "<span class='timerHours'>" + days + "</span>" + "<span class='timerDay'>օր</span>" + "</div>"
+            + "<span class='line'></span> "
+            + "<div>" + "<span class='timerHours'>" + hours + "</span>" + "<span class='timerDay'>ժամ</span>" + "</div>"
+            + "<span class='line'></span> "
+            + "<div>" + "<span class='timerHours'>" + min + "</span>" + "<span class='timerDay'>րոպե</span>" + "</div>"
+            + "<span class='line'> </span>"
+            + "<div>" + "<span class='timerHours'>" + sec + "</span>" + "<span class='timerDay'>վայրկյան</span>" + "</div>";
+
+        if (distance < 0) {
+            clearInterval(interval);
+            document.getElementById('timer').innerHTML = "Ավարտ";
+        }
+    }
+
+    const interval = setInterval(countdown, 1000);
+
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.classList.add('active');
+    }
+
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.classList.remove('active');
+    }
+
+    document.getElementById('openChurchMap').addEventListener('click', function() {
+        openModal('churchModal');
+    });
+
+    document.getElementById('closeChurchModal').addEventListener('click', function() {
+        closeModal('churchModal');
+    });
+
+    document.getElementById('openImperialMap').addEventListener('click', function() {
+        openModal('imperialModal');
+    });
+
+    document.getElementById('closeImperialModal').addEventListener('click', function() {
+        closeModal('imperialModal');
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.classList.remove('active');
+        }
+    });
+</script>
+</body>
+</html>

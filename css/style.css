@@ -1,0 +1,454 @@
+@font-face {
+    font-family: 'Pinyon Script';
+    src: url('../fonts/PinyonScript-Regular.woff2') format('woff2'),
+    url('../fonts/PinyonScript-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Kotayk';
+    src: url('../fonts/Kotayk-Regular.woff2') format('woff2'),
+    url('../fonts/Kotayk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kotayk';
+    src: url('../fonts/Kotayk-Italic.woff2') format('woff2'),
+    url('../fonts/Kotayk-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GAA Gayane';
+    src: url('../fonts/GAAGayane-Bold.woff2') format('woff2'),
+    url('../fonts/GAAGayane-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GAA Gayane';
+    src: url('../fonts/GAAGayane-DemiBold.woff2') format('woff2'),
+    url('../fonts/GAAGayane-DemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GAA Gayane';
+    src: url('../fonts/GAAGayane-BoldItalic.woff2') format('woff2'),
+    url('../fonts/GAAGayane-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GAA Gayane';
+    src: url('../fonts/GAAGayane-SemiBold.woff2') format('woff2'),
+    url('../fonts/GAAGayane-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GAA Gayane';
+    src: url('../fonts/GAAGayane-ExtraBold.woff2') format('woff2'),
+    url('../fonts/GAAGayane-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GAA Gayane';
+    src: url('../fonts/GAAGayane-DemiBoldItalic.woff2') format('woff2'),
+    url('../fonts/GAAGayane-DemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GAA Gayane';
+    src: url('../fonts/GAAGayane-Medium.woff2') format('woff2'),
+    url('../fonts/GAAGayane-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GAA Gayane';
+    src: url('../fonts/GAAGayane-ExtraBoldItalic.woff2') format('woff2'),
+    url('../fonts/GAAGayane-ExtraBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GAA Gayane';
+    src: url('../fonts/GAAGayane-MediumItalic.woff2') format('woff2'),
+    url('../fonts/GAAGayane-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GAA Gayane';
+    src: url('../fonts/GAAGayane-SemiBoldItalic.woff2') format('woff2'),
+    url('../fonts/GAAGayane-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GAA Gayane';
+    src: url('../fonts/../fonts/GAAGayane-Regular.woff2') format('woff2'),
+    url('../fonts/GAAGayane-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GAA Gayane';
+    src: url('../fonts/GAAGayane-Italic.woff2') format('woff2'),
+    url('../fonts/GAAGayane-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Arm Hmk\'s';
+    src: url('../fonts/ArmHmksLight-Bold.woff2') format('woff2'),
+    url('../fonts/ArmHmksLight-Bold.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arm Hmk\'s';
+    src: url('../fonts/ArmHmksLight-ExtraBold.woff2') format('woff2'),
+    url('../fonts/ArmHmksLight-ExtraBold.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'GHEA Grapalat';
+    src: url('../fonts/GHEAGrapalat-Bold.woff2') format('woff2'),
+    url('../fonts/GHEAGrapalat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GHEA Grapalat';
+    src: url('../fonts/GHEAGrapalat.woff2') format('woff2'),
+    url('../fonts/GHEAGrapalat.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GHEA Grapalat';
+    src: url('../fonts/GHEAGrapalat-BoldItalic.woff2') format('woff2'),
+    url('../fonts/GHEAGrapalat-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GHEA Grapalat';
+    src: url('../fonts/GHEAGrapalat-Italic.woff2') format('woff2'),
+    url('../fonts/GHEAGrapalat-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #000;
+    font-size: 16px;
+    background-color: white;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+
+․header {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.headerFigure {
+    width: 100%;
+    height: 100%;
+}
+
+.headerImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 184px 184px;
+}
+
+.language {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    /*padding-left: 40px;*/
+
+}
+
+.languageLink {
+    color: black;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: Arm Hmk\'s, sans-serif;
+}
+
+.names {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.names {
+    width: 30%;
+    color: #fff;
+}
+
+.name:first-child {
+    margin-left: 0;
+}
+
+.name:last-child {
+    margin-right: 0;
+}
+
+
+.main {
+    width: 100%;
+    background-color: white;
+}
+
+.invitation {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.invitationMainTitle {
+    color: black;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: Kotayk, sans-serif;
+}
+
+.invitationMainTitleEng {
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: "Pinyon Script", sans-serif;
+}
+
+.invitationText {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.invitationTextTitle {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Kotayk, sans-serif;
+}
+
+.invitationTextInfo {
+    font-size: 16px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    font-family: Arm Hmk\'s, sans-serif;
+}
+
+.invitationFigure {
+    width: 100%;
+}
+
+.invitationImg {
+    width: 100%;
+}
+
+.date {
+    width: 100%;
+    display: flex;
+    padding-left: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.day {
+    font-size: 64px;
+    font-family: "GAA Gayane", sans-serif;
+}
+
+.year {
+    font-size: 40px;
+    font-family: Arm Hmk\'s, sans-serif;
+}
+
+
+.timer {
+    width: 100%;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 50px;
+}
+
+.timerInfo {
+    width: 100%;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-family: Kotayk, sans-serif;
+}
+
+.timerInfoEng {
+    width: 100%;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-family: Arm Hmk\'s, sans-serif;
+}
+
+.programBtn {
+    margin-bottom: 50px;
+}
+
+.programTitle {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "GAA Gayane", sans-serif;
+}
+
+.programFigure {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.programImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 160px;
+}
+
+.programInfo {
+    width: 100%;
+    padding-left: 30px;
+}
+
+.groom {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family: Kotayk, sans-serif;
+}
+
+.address {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-family: Arm Hmk\'s, sans-serif;
+}
+
+.time {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.map {
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 100px;
+    background-color: #000000;
+}
+
+.mapLink {
+    color: white;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    font-family: "GHEA Grapalat", sans-serif;
+}
+
+.thankYouBtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.thankYouTitle {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Kotayk, sans-serif;
+}
+
+.thankYou {
+    font-size: 16px;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 50px;
+    font-family: Arm Hmk\'s, sans-serif;
+}
